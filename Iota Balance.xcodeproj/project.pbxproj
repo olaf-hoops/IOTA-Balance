@@ -7,14 +7,57 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07194AB530C8A74F04A81044 /* Pods_IOTA_Widget.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA5E8F7A6505FB18097169D5 /* Pods_IOTA_Widget.framework */; };
+		77E2D469AA66560D0908605F /* Pods_Iota_Balance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 423BADA218D3B30660A1B28E /* Pods_Iota_Balance.framework */; };
 		B65CEBE322AE8FBF00DB7DE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65CEBE222AE8FBF00DB7DE2 /* AppDelegate.swift */; };
 		B65CEBE522AE8FBF00DB7DE2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65CEBE422AE8FBF00DB7DE2 /* ViewController.swift */; };
 		B65CEBE822AE8FBF00DB7DE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B65CEBE622AE8FBF00DB7DE2 /* Main.storyboard */; };
 		B65CEBEA22AE8FC000DB7DE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B65CEBE922AE8FC000DB7DE2 /* Assets.xcassets */; };
 		B65CEBED22AE8FC000DB7DE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B65CEBEB22AE8FC000DB7DE2 /* LaunchScreen.storyboard */; };
+		B65CEBF522AEA20100DB7DE2 /* IotaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65CEBF422AEA20100DB7DE2 /* IotaModel.swift */; };
+		B65CEBFB22AED81200DB7DE2 /* PriceJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65CEBFA22AED81200DB7DE2 /* PriceJson.swift */; };
+		B65CEC0322B16DC600DB7DE2 /* AddAdressVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65CEC0222B16DC600DB7DE2 /* AddAdressVC.swift */; };
+		B671535622BA8F4E005FCE39 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B671535522BA8F4E005FCE39 /* NotificationCenter.framework */; };
+		B671535922BA8F4E005FCE39 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B671535822BA8F4E005FCE39 /* TodayViewController.swift */; };
+		B671535C22BA8F4E005FCE39 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B671535A22BA8F4E005FCE39 /* MainInterface.storyboard */; };
+		B671536022BA8F4E005FCE39 /* IOTA Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B671535422BA8F4E005FCE39 /* IOTA Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B671536522BA9092005FCE39 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B671535822BA8F4E005FCE39 /* TodayViewController.swift */; };
+		B671536922BA9749005FCE39 /* IotaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65CEBF422AEA20100DB7DE2 /* IotaModel.swift */; };
+		B671536A22BA9880005FCE39 /* PriceJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65CEBFA22AED81200DB7DE2 /* PriceJson.swift */; };
+		B671536B22BA9885005FCE39 /* AddAdressVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65CEC0222B16DC600DB7DE2 /* AddAdressVC.swift */; };
+		B671536C22BA9889005FCE39 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65CEBE422AE8FBF00DB7DE2 /* ViewController.swift */; };
+		B671536D22BA9D8D005FCE39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B65CEBE922AE8FC000DB7DE2 /* Assets.xcassets */; };
+		B694183E22D10018006030A5 /* Privacy Policy.md in Resources */ = {isa = PBXBuildFile; fileRef = B694183D22D10018006030A5 /* Privacy Policy.md */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		B671535E22BA8F4E005FCE39 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B65CEBD722AE8FBF00DB7DE2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B671535322BA8F4E005FCE39;
+			remoteInfo = "IOTA Widget";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B671536422BA8F4E005FCE39 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B671536022BA8F4E005FCE39 /* IOTA Widget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		423BADA218D3B30660A1B28E /* Pods_Iota_Balance.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Iota_Balance.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8689170F38F15117DDA4D7E9 /* Pods-Iota Balance.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Iota Balance.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Iota Balance/Pods-Iota Balance.debug.xcconfig"; sourceTree = "<group>"; };
+		8F61153D240E78A5A79C5D8B /* Pods-IOTA Widget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOTA Widget.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IOTA Widget/Pods-IOTA Widget.debug.xcconfig"; sourceTree = "<group>"; };
 		B65CEBDF22AE8FBF00DB7DE2 /* Iota Balance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Iota Balance.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B65CEBE222AE8FBF00DB7DE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B65CEBE422AE8FBF00DB7DE2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +65,20 @@
 		B65CEBE922AE8FC000DB7DE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B65CEBEC22AE8FC000DB7DE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B65CEBEE22AE8FC000DB7DE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B65CEBF422AEA20100DB7DE2 /* IotaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IotaModel.swift; sourceTree = "<group>"; };
+		B65CEBFA22AED81200DB7DE2 /* PriceJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceJson.swift; sourceTree = "<group>"; };
+		B65CEC0222B16DC600DB7DE2 /* AddAdressVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAdressVC.swift; sourceTree = "<group>"; };
+		B671535422BA8F4E005FCE39 /* IOTA Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "IOTA Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B671535522BA8F4E005FCE39 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		B671535822BA8F4E005FCE39 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TodayViewController.swift; path = "/Users/ohw/Documents/Xcode/Iota Balance/Iota Balance/IOTA Widget/TodayViewController.swift"; sourceTree = "<absolute>"; };
+		B671535B22BA8F4E005FCE39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		B671535D22BA8F4E005FCE39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B671537222C9307C005FCE39 /* Iota Balance.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Iota Balance.entitlements"; sourceTree = "<group>"; };
+		B671537322C93084005FCE39 /* IOTA Widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = "IOTA Widget.entitlements"; path = "IOTA Widget/IOTA Widget.entitlements"; sourceTree = SOURCE_ROOT; };
+		B68BF65FFEFC148D871ACF7E /* Pods-Iota Balance.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Iota Balance.release.xcconfig"; path = "Pods/Target Support Files/Pods-Iota Balance/Pods-Iota Balance.release.xcconfig"; sourceTree = "<group>"; };
+		B694183D22D10018006030A5 /* Privacy Policy.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Privacy Policy.md"; sourceTree = "<group>"; };
+		DA5E8F7A6505FB18097169D5 /* Pods_IOTA_Widget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IOTA_Widget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF90E928D6F055EFBD984072 /* Pods-IOTA Widget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOTA Widget.release.xcconfig"; path = "Pods/Target Support Files/Pods-IOTA Widget/Pods-IOTA Widget.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +86,51 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77E2D469AA66560D0908605F /* Pods_Iota_Balance.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B671535122BA8F4E005FCE39 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B671535622BA8F4E005FCE39 /* NotificationCenter.framework in Frameworks */,
+				07194AB530C8A74F04A81044 /* Pods_IOTA_Widget.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08EC4489DB98FF1F40407D87 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B671535522BA8F4E005FCE39 /* NotificationCenter.framework */,
+				DA5E8F7A6505FB18097169D5 /* Pods_IOTA_Widget.framework */,
+				423BADA218D3B30660A1B28E /* Pods_Iota_Balance.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9ECB3E1E229956D42E9CD3DB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8F61153D240E78A5A79C5D8B /* Pods-IOTA Widget.debug.xcconfig */,
+				DF90E928D6F055EFBD984072 /* Pods-IOTA Widget.release.xcconfig */,
+				8689170F38F15117DDA4D7E9 /* Pods-Iota Balance.debug.xcconfig */,
+				B68BF65FFEFC148D871ACF7E /* Pods-Iota Balance.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B65CEBD622AE8FBF00DB7DE2 = {
 			isa = PBXGroup;
 			children = (
 				B65CEBE122AE8FBF00DB7DE2 /* Iota Balance */,
+				B671535722BA8F4E005FCE39 /* Iota Widget */,
 				B65CEBE022AE8FBF00DB7DE2 /* Products */,
+				08EC4489DB98FF1F40407D87 /* Frameworks */,
+				9ECB3E1E229956D42E9CD3DB /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -47,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				B65CEBDF22AE8FBF00DB7DE2 /* Iota Balance.app */,
+				B671535422BA8F4E005FCE39 /* IOTA Widget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -54,15 +146,32 @@
 		B65CEBE122AE8FBF00DB7DE2 /* Iota Balance */ = {
 			isa = PBXGroup;
 			children = (
+				B671537222C9307C005FCE39 /* Iota Balance.entitlements */,
 				B65CEBE222AE8FBF00DB7DE2 /* AppDelegate.swift */,
 				B65CEBE422AE8FBF00DB7DE2 /* ViewController.swift */,
+				B65CEC0222B16DC600DB7DE2 /* AddAdressVC.swift */,
+				B65CEBF422AEA20100DB7DE2 /* IotaModel.swift */,
+				B65CEBFA22AED81200DB7DE2 /* PriceJson.swift */,
 				B65CEBE622AE8FBF00DB7DE2 /* Main.storyboard */,
 				B65CEBE922AE8FC000DB7DE2 /* Assets.xcassets */,
 				B65CEBEB22AE8FC000DB7DE2 /* LaunchScreen.storyboard */,
 				B65CEBEE22AE8FC000DB7DE2 /* Info.plist */,
+				B694183D22D10018006030A5 /* Privacy Policy.md */,
 			);
 			path = "Iota Balance";
 			sourceTree = "<group>";
+		};
+		B671535722BA8F4E005FCE39 /* Iota Widget */ = {
+			isa = PBXGroup;
+			children = (
+				B671537322C93084005FCE39 /* IOTA Widget.entitlements */,
+				B671535822BA8F4E005FCE39 /* TodayViewController.swift */,
+				B671535A22BA8F4E005FCE39 /* MainInterface.storyboard */,
+				B671535D22BA8F4E005FCE39 /* Info.plist */,
+			);
+			name = "Iota Widget";
+			path = "/Users/ohw/Documents/Xcode/Iota Balance/Iota Balance/Iota Widget";
+			sourceTree = "<absolute>";
 		};
 /* End PBXGroup section */
 
@@ -71,18 +180,40 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B65CEBF122AE8FC000DB7DE2 /* Build configuration list for PBXNativeTarget "Iota Balance" */;
 			buildPhases = (
+				12D7FD773C6B4A41A7607AA1 /* [CP] Check Pods Manifest.lock */,
 				B65CEBDB22AE8FBF00DB7DE2 /* Sources */,
 				B65CEBDC22AE8FBF00DB7DE2 /* Frameworks */,
 				B65CEBDD22AE8FBF00DB7DE2 /* Resources */,
+				B671536422BA8F4E005FCE39 /* Embed App Extensions */,
+				1DF5D5BB257CB99563104F12 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B671535F22BA8F4E005FCE39 /* PBXTargetDependency */,
 			);
 			name = "Iota Balance";
 			productName = "Iota Balance";
 			productReference = B65CEBDF22AE8FBF00DB7DE2 /* Iota Balance.app */;
 			productType = "com.apple.product-type.application";
+		};
+		B671535322BA8F4E005FCE39 /* IOTA Widget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B671536322BA8F4E005FCE39 /* Build configuration list for PBXNativeTarget "IOTA Widget" */;
+			buildPhases = (
+				B43263D6DED3716F48E0E4A6 /* [CP] Check Pods Manifest.lock */,
+				B671535022BA8F4E005FCE39 /* Sources */,
+				B671535122BA8F4E005FCE39 /* Frameworks */,
+				B671535222BA8F4E005FCE39 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "IOTA Widget";
+			productName = "IOTA Widget";
+			productReference = B671535422BA8F4E005FCE39 /* IOTA Widget.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -96,6 +227,19 @@
 				TargetAttributes = {
 					B65CEBDE22AE8FBF00DB7DE2 = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					B671535322BA8F4E005FCE39 = {
+						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -113,6 +257,7 @@
 			projectRoot = "";
 			targets = (
 				B65CEBDE22AE8FBF00DB7DE2 /* Iota Balance */,
+				B671535322BA8F4E005FCE39 /* IOTA Widget */,
 			);
 		};
 /* End PBXProject section */
@@ -124,23 +269,116 @@
 			files = (
 				B65CEBED22AE8FC000DB7DE2 /* LaunchScreen.storyboard in Resources */,
 				B65CEBEA22AE8FC000DB7DE2 /* Assets.xcassets in Resources */,
+				B694183E22D10018006030A5 /* Privacy Policy.md in Resources */,
 				B65CEBE822AE8FBF00DB7DE2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B671535222BA8F4E005FCE39 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B671536D22BA9D8D005FCE39 /* Assets.xcassets in Resources */,
+				B671535C22BA8F4E005FCE39 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		12D7FD773C6B4A41A7607AA1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Iota Balance-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1DF5D5BB257CB99563104F12 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Iota Balance/Pods-Iota Balance-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/IotaKit/IotaKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IotaKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Iota Balance/Pods-Iota Balance-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B43263D6DED3716F48E0E4A6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IOTA Widget-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B65CEBDB22AE8FBF00DB7DE2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B65CEBFB22AED81200DB7DE2 /* PriceJson.swift in Sources */,
+				B65CEBF522AEA20100DB7DE2 /* IotaModel.swift in Sources */,
+				B671536522BA9092005FCE39 /* TodayViewController.swift in Sources */,
+				B65CEC0322B16DC600DB7DE2 /* AddAdressVC.swift in Sources */,
 				B65CEBE522AE8FBF00DB7DE2 /* ViewController.swift in Sources */,
 				B65CEBE322AE8FBF00DB7DE2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B671535022BA8F4E005FCE39 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B671536C22BA9889005FCE39 /* ViewController.swift in Sources */,
+				B671536B22BA9885005FCE39 /* AddAdressVC.swift in Sources */,
+				B671536922BA9749005FCE39 /* IotaModel.swift in Sources */,
+				B671536A22BA9880005FCE39 /* PriceJson.swift in Sources */,
+				B671535922BA8F4E005FCE39 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B671535F22BA8F4E005FCE39 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B671535322BA8F4E005FCE39 /* IOTA Widget */;
+			targetProxy = B671535E22BA8F4E005FCE39 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B65CEBE622AE8FBF00DB7DE2 /* Main.storyboard */ = {
@@ -159,12 +397,21 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		B671535A22BA8F4E005FCE39 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B671535B22BA8F4E005FCE39 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		B65CEBEF22AE8FC000DB7DE2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -226,6 +473,7 @@
 		B65CEBF022AE8FC000DB7DE2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -280,8 +528,11 @@
 		};
 		B65CEBF222AE8FC000DB7DE2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8689170F38F15117DDA4D7E9 /* Pods-Iota Balance.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Iota Balance/Iota Balance.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M3AWM95QS8;
 				INFOPLIST_FILE = "Iota Balance/Info.plist";
@@ -298,8 +549,11 @@
 		};
 		B65CEBF322AE8FC000DB7DE2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B68BF65FFEFC148D871ACF7E /* Pods-Iota Balance.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Iota Balance/Iota Balance.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M3AWM95QS8;
 				INFOPLIST_FILE = "Iota Balance/Info.plist";
@@ -309,6 +563,48 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.olaf.hoops.Iota-Balance";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B671536122BA8F4E005FCE39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F61153D240E78A5A79C5D8B /* Pods-IOTA Widget.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "IOTA Widget/IOTA Widget.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M3AWM95QS8;
+				INFOPLIST_FILE = "IOTA Widget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.olaf.hoops.Iota-Balance.IOTA-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B671536222BA8F4E005FCE39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF90E928D6F055EFBD984072 /* Pods-IOTA Widget.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "IOTA Widget/IOTA Widget.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M3AWM95QS8;
+				INFOPLIST_FILE = "IOTA Widget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.olaf.hoops.Iota-Balance.IOTA-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -331,6 +627,15 @@
 			buildConfigurations = (
 				B65CEBF222AE8FC000DB7DE2 /* Debug */,
 				B65CEBF322AE8FC000DB7DE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B671536322BA8F4E005FCE39 /* Build configuration list for PBXNativeTarget "IOTA Widget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B671536122BA8F4E005FCE39 /* Debug */,
+				B671536222BA8F4E005FCE39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
