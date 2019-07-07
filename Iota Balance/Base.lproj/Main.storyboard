@@ -64,17 +64,36 @@
                                                     </stackView>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="220" id="alD-hJ-2nM"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="220" id="alD-hJ-2nM">
+                                                        <variation key="heightClass=regular" constant="220"/>
+                                                    </constraint>
                                                 </constraints>
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8cj-22-EaC" customClass="LineChartView" customModule="Charts">
                                                 <rect key="frame" x="0.0" y="346" width="375" height="200"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iP1-VL-5im">
+                                                        <rect key="frame" x="147.66666666666666" y="186" width="80" height="24"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="80" id="MCK-ae-Izd"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                        <state key="normal" title="Button">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="chartButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aFB-bu-KC3"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <accessibility key="accessibilityConfiguration">
                                                     <accessibilityTraits key="traits" notEnabled="YES"/>
                                                 </accessibility>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="3BQ-Wq-faE"/>
+                                                    <constraint firstAttribute="bottom" secondItem="iP1-VL-5im" secondAttribute="bottom" constant="-10" id="MSh-Pc-CXC"/>
+                                                    <constraint firstItem="iP1-VL-5im" firstAttribute="centerX" secondItem="8cj-22-EaC" secondAttribute="centerX" id="zpH-UD-U8d"/>
                                                 </constraints>
                                             </view>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="30o-6K-Oc7">
@@ -97,8 +116,8 @@
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstItem="czv-fQ-On7" firstAttribute="top" secondItem="LF9-yG-8AG" secondAttribute="top" constant="12" id="Cmh-9v-HxY"/>
                                                         <constraint firstAttribute="trailing" secondItem="czv-fQ-On7" secondAttribute="trailing" id="N6A-jm-gbj"/>
+                                                        <constraint firstItem="czv-fQ-On7" firstAttribute="centerY" secondItem="LF9-yG-8AG" secondAttribute="centerY" id="QLm-CZ-0e9"/>
                                                         <constraint firstItem="czv-fQ-On7" firstAttribute="leading" secondItem="LF9-yG-8AG" secondAttribute="leading" id="RBf-Nh-Nvg"/>
                                                     </constraints>
                                                 </view>
@@ -111,10 +130,10 @@
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XkN-g0-hfy">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label Test" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DYi-0x-Q4P">
-                                                                            <rect key="frame" x="10" y="0.0" width="355" height="43.666666666666664"/>
+                                                                            <rect key="frame" x="10" y="0.0" width="394" height="43.666666666666664"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <nil key="highlightedColor"/>
@@ -191,6 +210,7 @@
                         <outlet property="addAdressButton" destination="pp4-Jk-qhF" id="wfW-Ky-prn"/>
                         <outlet property="balanceViewFiat" destination="d4t-bc-9GM" id="GCO-7A-NKl"/>
                         <outlet property="balanceViewIota" destination="hbi-wh-wBo" id="q2A-kz-Um1"/>
+                        <outlet property="chartButton" destination="iP1-VL-5im" id="eMA-rR-oc2"/>
                         <outlet property="iotaImage" destination="0xb-4H-EpI" id="vtQ-Ow-CeM"/>
                         <outlet property="mChart" destination="8cj-22-EaC" id="DtR-69-8dv"/>
                         <outlet property="priceViewFiat" destination="oXQ-rN-bEz" id="ccg-GK-N9F"/>

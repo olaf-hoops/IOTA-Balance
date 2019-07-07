@@ -12,9 +12,8 @@ import Charts
 
 
 class ViewController: UIViewController, IotaModelProtocol, UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate, addAdressButtonTapped {
-    
-    
-    
+  
+
     var checkAdress = IotaModel.adress
     let model = IotaModel()
     var adress = IotaModel.adress
@@ -25,16 +24,18 @@ class ViewController: UIViewController, IotaModelProtocol, UITableViewDelegate, 
     let refreshControlScroll = UIRefreshControl()
     let numberformatter = NumberFormatter()
     var dataEntries: [ChartDataEntry] = []
+    var chartButtonText = ""
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var balanceViewIota: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var balanceViewFiat: UILabel!
     @IBOutlet weak var priceViewFiat: UILabel!
-    @IBOutlet weak var refreshButton: UIButton!
     @IBOutlet weak var addAdressButton: UIButton!
     @IBOutlet weak var iotaImage: UIImageView!
     @IBOutlet weak var mChart: LineChartView!
+    @IBOutlet weak var chartButton: UIButton!
+    
     
     
     override func viewDidLoad() {
@@ -57,6 +58,11 @@ class ViewController: UIViewController, IotaModelProtocol, UITableViewDelegate, 
         addAdressVC.modalPresentationStyle = .overCurrentContext
         addAdressVC.delegate = self
         
+        // Button Style
+        chartButton.layer.cornerRadius = 10
+        chartButton.layer.borderColor = UIColor.white.withAlphaComponent(0.5).cgColor
+        chartButton.layer.borderWidth = 1.5
+        chartButton.clipsToBounds = true
         
         // Add Refresh Control to Scroll View
         if #available(iOS 10.0, *) {
@@ -70,7 +76,9 @@ class ViewController: UIViewController, IotaModelProtocol, UITableViewDelegate, 
         
         // Start
         model.getPrice()
-        model.getHistoryJson()
+        chartButtonText = "10 Day Chart"
+        chartButton.setTitle(chartButtonText, for: .normal)
+        model.getHistoryWeekJson()
         
     }
     
@@ -82,18 +90,87 @@ class ViewController: UIViewController, IotaModelProtocol, UITableViewDelegate, 
     
     @objc private func refreshData(_ sender: Any) {
       
-        // Fetch new Data
-        model.getBalance()
-        model.getPrice()
-        model.getHistoryJson()
+        refreshView()
         
         self.refreshControlScroll.endRefreshing()
         
     }
     
+    func refreshView() {
+        
+        // Fetch new Data
+        model.getBalance()
+        model.getPrice()
+        
+        if chartButtonText == "10 Day Chart" {
+            
+            model.getHistoryWeekJson()
+            
+        }
+            
+        else if chartButtonText == "30 Day Chart" {
+            
+            model.getHistoryMonthJson()
+            
+        }
+        
+        else if chartButtonText == "24h Chart" {
+            
+            model.getHistoryHourJson()
+            
+        }
+        
+        
+    }
+    
+    @IBAction func chartButtonTapped(_ sender: Any) {
+        
+        if chartButtonText == "10 Day Chart" {
+            
+            chartButtonText = "30 Day Chart"
+            chartButton.setTitle(chartButtonText, for: .normal)
+            
+        }
+        
+        else if chartButtonText == "30 Day Chart" {
+            
+            chartButtonText = "24h Chart"
+            chartButton.setTitle(chartButtonText, for: .normal)
+            
+        }
+        
+        else if chartButtonText == "24h Chart" {
+            
+            chartButtonText = "10 Day Chart"
+            chartButton.setTitle(chartButtonText, for: .normal)
+            
+        }
+        
+        refreshView()
+        
+    }
+    
     // Historical Price
     
-    func updatePriceHisto(priceHisto: [PriceHistoJson]) {
+    func updatePriceHistoHour(priceHisto: [PriceHistoJson]) {
+        
+        self.histroy = priceHisto
+        let histoRaw = self.histroy[0].Data
+        var myArray = [Double]()
+        dataEntries.removeAll()
+        
+        for i in 0...12 {
+            
+            myArray.append(histoRaw[i*2].close)
+            
+        }
+        
+        setChart(values: myArray)
+        self.view.layoutIfNeeded()
+        
+    }
+    
+    func updatePriceHistoWeek(priceHisto: [PriceHistoJson]) {
         
         self.histroy = priceHisto
         let histoRaw = self.histroy[0].Data
@@ -111,8 +188,24 @@ class ViewController: UIViewController, IotaModelProtocol, UITableViewDelegate, 
         
     }
     
-    // Chart
+    func updatePriceHistoMonth(priceHisto: [PriceHistoJson]) {
+        
+        self.histroy = priceHisto
+        let histoRaw = self.histroy[0].Data
+        var myArray = [Double]()
+        dataEntries.removeAll()
+        
+        for i in 0...10 {
+            
+            myArray.append(histoRaw[i*3].close)
+            
+        }
+        
+        setChart(values: myArray)
+        self.view.layoutIfNeeded()
+    }
     
+    // Chart
     func setChart(values: [Double]) {
         mChart.noDataText = "No data available!"
         for i in 0..<values.count {
@@ -147,7 +240,7 @@ class ViewController: UIViewController, IotaModelProtocol, UITableViewDelegate, 
         mChart.leftAxis.drawGridLinesEnabled = false
         mChart.rightAxis.drawAxisLineEnabled = false
         mChart.rightAxis.drawGridLinesEnabled = false
-        mChart.legend.enabled = true
+        mChart.legend.enabled = false
         mChart.xAxis.enabled = false
         mChart.leftAxis.enabled = false
         mChart.rightAxis.enabled = false

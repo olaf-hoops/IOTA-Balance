@@ -14,7 +14,9 @@ protocol IotaModelProtocol {
     
     func updateBalance(balance:Int64)
     func updatePrice(price:(PriceJson))
-    func updatePriceHisto(priceHisto:[PriceHistoJson])
+    func updatePriceHistoWeek(priceHisto:[PriceHistoJson])
+    func updatePriceHistoMonth(priceHisto:[PriceHistoJson])
+    func updatePriceHistoHour(priceHisto:[PriceHistoJson])
     
 }
 
@@ -117,7 +119,7 @@ class IotaModel {
         
     }
     
-    func getHistoryJson() {
+    func getHistoryWeekJson() {
         
         
         // Create URL Object
@@ -147,7 +149,101 @@ class IotaModel {
                     
                     // Give data to ViewController by passing data from a background thread back to the main thread
                     DispatchQueue.main.async {
-                        self.delegate?.updatePriceHisto(priceHisto: [array])
+                        self.delegate?.updatePriceHistoWeek(priceHisto: [array])
+                    }
+                    
+                    
+                }
+                catch {
+                    print("Error while decoding json Data from web")
+                }
+            }
+            
+        }
+        
+        // Call resume on the DataTask Object
+        dataTask.resume()
+        
+    }
+    
+    func getHistoryMonthJson() {
+        
+        
+        // Create URL Object
+        let stringURL = "https://min-api.cryptocompare.com/data/histoday?fsym=MIOTA&tsym=USD&limit=30"
+        
+        let url = URL(string: stringURL)
+        
+        guard url != nil else {
+            print("URL Object is nil")
+            return
+        }
+        
+        // Get URL Session Object
+        let urlSession = URLSession.shared
+        
+        
+        // Get DataTask Object
+        let dataTask = urlSession.dataTask(with: url!) { (data, response, error) in
+            
+            if error == nil && data != nil {
+                do {
+                    // Create json decoder
+                    let decoder = JSONDecoder()
+                    
+                    // Try to parse the data
+                    let array = try decoder.decode((PriceHistoJson).self, from: data!)
+                    
+                    // Give data to ViewController by passing data from a background thread back to the main thread
+                    DispatchQueue.main.async {
+                        self.delegate?.updatePriceHistoMonth(priceHisto: [array])
+                    }
+                    
+                    
+                }
+                catch {
+                    print("Error while decoding json Data from web")
+                }
+            }
+            
+        }
+        
+        // Call resume on the DataTask Object
+        dataTask.resume()
+        
+    }
+    
+    func getHistoryHourJson() {
+        
+        
+        // Create URL Object
+        let stringURL = "https://min-api.cryptocompare.com/data/histohour?fsym=MIOTA&tsym=USD&limit=24"
+        
+        let url = URL(string: stringURL)
+        
+        guard url != nil else {
+            print("URL Object is nil")
+            return
+        }
+        
+        // Get URL Session Object
+        let urlSession = URLSession.shared
+        
+        
+        // Get DataTask Object
+        let dataTask = urlSession.dataTask(with: url!) { (data, response, error) in
+            
+            if error == nil && data != nil {
+                do {
+                    // Create json decoder
+                    let decoder = JSONDecoder()
+                    
+                    // Try to parse the data
+                    let array = try decoder.decode((PriceHistoJson).self, from: data!)
+                    
+                    // Give data to ViewController by passing data from a background thread back to the main thread
+                    DispatchQueue.main.async {
+                        self.delegate?.updatePriceHistoHour(priceHisto: [array])
                     }
                     
                     
